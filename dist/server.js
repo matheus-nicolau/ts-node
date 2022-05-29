@@ -6,6 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 app.get("/", (request, response) => {
-    return response.json({ mensage: "Hello" });
+    response.json({
+        mensage: "Hi :)e"
+    });
 });
-app.listen(3333);
+app.listen(3333, () => console.log('server is running'));
