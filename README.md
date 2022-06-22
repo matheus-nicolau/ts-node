@@ -1,2 +1,7 @@
 # ts-node
-project startup with typescript
+
+---
+
+project startup with typescript.
+
+---

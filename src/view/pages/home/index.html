@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<head>  
+    <%- include("../home/head); %>
+</head> 
+<body>
+    
+<main>
+    <div>
+        <h1>Teste Inicial</h1>
+        <form action="http://localhost:3333/categories" method="POST" id="" value="{name:Matheus&description:SUV}">
+            <fieldset>
+                <legend>Envio de Categorias</legend>
+                <label for="send-categories">Escreva a categoria</label>
+                <input type="text" name="categories-name" id="send-categories">
+            </fieldset>
+            <button>Enviar</button>
+        </form>
+    </div>
+    <div>
+        <form action="http://localhost:3333/categories" method="GET" id="">
+            <fieldset>
+                <legend>Busca de Categorias</legend>
+                <label for="send-categories">Escreva a categoria</label>
+                <input type="text" name="categories-name" id="send-categories">
+            </fieldset>
+            <button type="submit" >Enviar</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <%- include("../home/footer") %>
+</footer>
+</body>
