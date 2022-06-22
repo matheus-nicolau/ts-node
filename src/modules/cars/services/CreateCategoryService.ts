@@ -1,7 +1,6 @@
  
 import { ICategoriesRepository } from "../repositories/ICategoriesRepository";
 
-
 interface ICategoryService {
     name: string;
     description: string;
@@ -11,7 +10,6 @@ class CreateCategoryService {
 
     constructor(private categoriesRepository: ICategoriesRepository) {}
 
-       
     execute({name, description}: ICategoryService ): void {
             
         const categoryAlreadyExists = this.categoriesRepository.findByName(name);
@@ -20,10 +18,8 @@ class CreateCategoryService {
             throw new Error ("Category already exists!")
         }
         
-        this.categoriesRepository.create({ name, description});
-    
+        this.categoriesRepository.create({ name, description});  
     }
-
 }
 
 export { CreateCategoryService }

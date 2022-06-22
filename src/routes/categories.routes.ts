@@ -1,6 +1,5 @@
 import { Router } from 'express';
 import { CategoriesRepository } from "../modules/cars/repositories/CategoriesRepository"
-import { PostgreCategoriesRepository } from '../modules/cars/repositories/PostgreCategoriesRepository';
 import { CreateCategoryService } from '../modules/cars/services/CreateCategoryService';
 
 const categoriesRoutes = Router();
@@ -17,7 +16,7 @@ categoriesRoutes.post("/",(request, response) => {
     return response.status(201).send();
 })
 
-categoriesRoutes.get("/", (request, response) => {
+categoriesRoutes.get("/",(request, response) => {
 
    const list = categoriesRepository.list();
 
